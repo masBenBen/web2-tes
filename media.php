@@ -20,112 +20,45 @@ $kode_cust ="CST".FormatNoTrans(kodecust());
 $kode_supp ="SPL".FormatNoTrans(kodesupp());
 
 ?>
+
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>AHASS Motor</title>
+    <title>INSPINIA | Dashboard</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
 
     <!-- Toastr style -->
-    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet" />
 
     <!-- Gritter -->
-    <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+    <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet" />
 
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-  <body class="hold-transition skin-blue sidebar-mini">
-    <div class="wrapper">
+    <link href="css/animate.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
 
-      <header class="main-header">
-        <!-- Logo -->
-        <a href="" class="logo">
-          <!-- mini logo for sidebar mini 50x50 pixels -->
-          <span class="logo-mini">AHS</span>
-          <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg">AHASS MOTOR</span>
-        </a>
-        <!-- Header Navbar: style can be found in header.less -->
-        <nav class="navbar navbar-static-top" role="navigation">
-          <!-- Sidebar toggle button-->
-          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-            <span class="sr-only">Toggle navigation</span>
-          </a>
-          <div class="navbar-custom-menu">
-            <ul class="nav navbar-nav">
-              <!-- Messages: style can be found in dropdown.less-->
-             
-            
-            
-              <!-- User Account: style can be found in dropdown.less -->
-              <li class="dropdown user user-menu">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                  <span class="hidden-xs"><?php echo $nama; ?></span>
+  <body>
+    <div id="wrapper">
+      <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+          <ul class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+              <div class="dropdown profile-element">
+                <img alt="image" class="rounded-circle" src="img/profile_small.jpg" />
+                <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                  <span class="block m-t-xs font-bold"><?php echo $nama; ?></span>
+                  <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                 </a>
-                <ul class="dropdown-menu">
-                  <!-- User image -->
-                  <li class="user-header">
-                    <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-                    <p>
-                      <?php echo $nama; ?> 
-                      <small>Member since Nov. 2012</small>
-                    </p>
-                  </li>
-                  <!-- Menu Body -->
-                  <!-- Menu Footer-->
-                  <li class="user-footer">
-                    <div class="pull-right">
-                      <a href="logout.php" class="btn btn-default btn-flat">Sign out</a>
-                    </div>
-                  </li>
-                </ul>
-              </li>
-              <!-- Control Sidebar Toggle Button -->
-              <li>
-                <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
-      <!-- Left side column. contains the logo and sidebar -->
-      <aside class="main-sidebar">
-        <!-- sidebar: style can be found in sidebar.less -->
-        <section class="sidebar">
-          <!-- Sidebar user panel -->
-          <div class="user-panel">
-            <div class="pull-left image">
-              <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-            </div>
-            <div class="pull-left info">
-              <p><?php echo $nama; ?></p>
-              <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-            </div>
-          </div>
-          <!-- search form -->
-          <form action="#" method="get" class="sidebar-form">
-            <div class="input-group">
-              <input type="text" name="q" class="form-control" placeholder="Search...">
-              <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
-              </span>
-            </div>
-          </form>
-          <!-- /.search form -->
-          <!-- sidebar menu: : style can be found in sidebar.less -->
-
-
-
-
-          <ul class="sidebar-menu">
-            <li class="header">MAIN NAVIGATION</li>
-             <li><a href="media.php?page=home"><i class="fa fa-book"></i> <span>Dashboard</span></a></li>
+              </div>
+              <div class="logo-element">AHS</div>
+            </li>
+            <li><a href="media.php?page=home"><i class="fa fa-book"></i> <span>Dashboard</span></a></li>
               <?php
               if ($level == 'admin')
               {
@@ -141,7 +74,7 @@ $kode_supp ="SPL".FormatNoTrans(kodesupp());
                 <span>Data Master</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
-              <ul class="treeview-menu">
+              <ul class="nav nav-second-level">
                 <li><a href="media.php?page=produk"><i class="fa fa-circle-o"></i> Master Produk</a></li>
                 <li><a href="media.php?page=supplier"><i class="fa fa-circle-o"></i> Master Supplier</a></li>
                 <li><a href="media.php?page=customer"><i class="fa fa-circle-o"></i> Master Customer</a></li>
@@ -154,7 +87,7 @@ $kode_supp ="SPL".FormatNoTrans(kodesupp());
                 <span>Data Transaksi</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
-              <ul class="treeview-menu">
+              <ul class="nav nav-second-level">
                 <li><a href="media.php?page=pembelian"><i class="fa fa-circle-o"></i> Pembelian</a></li>
                 <li><a href="media.php?page=penjualan"><i class="fa fa-circle-o"></i> Penjualan</a></li>
               </ul>
@@ -166,21 +99,45 @@ $kode_supp ="SPL".FormatNoTrans(kodesupp());
                 <span>Laporan</span>
                 <i class="fa fa-angle-left pull-right"></i>
               </a>
-              <ul class="treeview-menu">
+              <ul class="nav nav-second-level">
                <li><a href="media.php?page=laporan-pembelian"><i class="fa fa-circle-o"></i> Laporan Pembelian</a></li>
                 <li><a href="media.php?page=laporan-penjualan"><i class="fa fa-circle-o"></i> Laporan Penjualan</a></li>
               </ul>
             </li>
+          </ul>
+        </div>
+      </nav>
 
-        </section>
-        <!-- /.sidebar -->
-      </aside>
+      <div id="page-wrapper" class="gray-bg dashbard-1">
+        <div class="row border-bottom">
+          <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+              <a class="navbar-minimalize minimalize-styl-2 btn btn-primary" href="#"
+                ><i class="fa fa-bars"></i>
+              </a>
+              <form role="search" class="navbar-form-custom" action="search_results.html">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    placeholder="Search for something..."
+                    class="form-control"
+                    name="top-search"
+                    id="top-search"
+                  />
+                </div>
+              </form>
+            </div>
+            <ul class="nav navbar-top-links navbar-right">
 
-      <!-- Content Wrapper. Contains page content -->
-      <div class="content-wrapper">
-        
-
-        <?php
+            <li>
+                <a href="logout.php"> <i class="fa fa-sign-out"></i> Log out </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="row border-bottom white-bg dashboard-header">
+          <!-- route -->
+          <?php
 
         $page = $_GET['page'];
 
@@ -226,213 +183,648 @@ $kode_supp ="SPL".FormatNoTrans(kodesupp());
         }
 
         ?>
-
-
-
-
-
-
-
-
-
-        </div><!-- /.content-wrapper -->
-      <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-          <b>Version</b> 2.3.0
         </div>
-        <strong>Copyright &copy; 2015 <a href="media.php?page=home">Ahass Motor</a>.</strong> All rights reserved.
-      </footer>
-
-      <!-- Control Sidebar -->
-      <aside class="control-sidebar control-sidebar-dark">
-        <!-- Create the tabs -->
-        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-          <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-          <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-        </ul>
-        <!-- Tab panes -->
-        <div class="tab-content">
-          <!-- Home tab content -->
-          <div class="tab-pane" id="control-sidebar-home-tab">
-            <h3 class="control-sidebar-heading">Recent Activity</h3>
-            <ul class="control-sidebar-menu">
-              <li>
-                <a href="javascript::;">
-                  <i class="menu-icon fa fa-birthday-cake bg-red"></i>
-                  <div class="menu-info">
-                    <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
-                    <p>Will be 23 on April 24th</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="javascript::;">
-                  <i class="menu-icon fa fa-user bg-yellow"></i>
-                  <div class="menu-info">
-                    <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
-                    <p>New phone +1(800)555-1234</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="javascript::;">
-                  <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
-                  <div class="menu-info">
-                    <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
-                    <p>nora@example.com</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="javascript::;">
-                  <i class="menu-icon fa fa-file-code-o bg-green"></i>
-                  <div class="menu-info">
-                    <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
-                    <p>Execution time 5 seconds</p>
-                  </div>
-                </a>
-              </li>
-            </ul><!-- /.control-sidebar-menu -->
-
-            <h3 class="control-sidebar-heading">Tasks Progress</h3>
-            <ul class="control-sidebar-menu">
-              <li>
-                <a href="javascript::;">
-                  <h4 class="control-sidebar-subheading">
-                    Custom Template Design
-                    <span class="label label-danger pull-right">70%</span>
-                  </h4>
-                  <div class="progress progress-xxs">
-                    <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="javascript::;">
-                  <h4 class="control-sidebar-subheading">
-                    Update Resume
-                    <span class="label label-success pull-right">95%</span>
-                  </h4>
-                  <div class="progress progress-xxs">
-                    <div class="progress-bar progress-bar-success" style="width: 95%"></div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="javascript::;">
-                  <h4 class="control-sidebar-subheading">
-                    Laravel Integration
-                    <span class="label label-warning pull-right">50%</span>
-                  </h4>
-                  <div class="progress progress-xxs">
-                    <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="javascript::;">
-                  <h4 class="control-sidebar-subheading">
-                    Back End Framework
-                    <span class="label label-primary pull-right">68%</span>
-                  </h4>
-                  <div class="progress progress-xxs">
-                    <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
-                  </div>
-                </a>
-              </li>
-            </ul><!-- /.control-sidebar-menu -->
-
-          </div><!-- /.tab-pane -->
-          <!-- Stats tab content -->
-          <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div><!-- /.tab-pane -->
-          <!-- Settings tab content -->
-          <div class="tab-pane" id="control-sidebar-settings-tab">
-            <form method="post">
-              <h3 class="control-sidebar-heading">General Settings</h3>
-              <div class="form-group">
-                <label class="control-sidebar-subheading">
-                  Report panel usage
-                  <input type="checkbox" class="pull-right" checked>
-                </label>
-                <p>
-                  Some information about this general settings option
-                </p>
-              </div><!-- /.form-group -->
-
-              <div class="form-group">
-                <label class="control-sidebar-subheading">
-                  Allow mail redirect
-                  <input type="checkbox" class="pull-right" checked>
-                </label>
-                <p>
-                  Other sets of options are available
-                </p>
-              </div><!-- /.form-group -->
-
-              <div class="form-group">
-                <label class="control-sidebar-subheading">
-                  Expose author name in posts
-                  <input type="checkbox" class="pull-right" checked>
-                </label>
-                <p>
-                  Allow the user to show his name in blog posts
-                </p>
-              </div><!-- /.form-group -->
-
-              <h3 class="control-sidebar-heading">Chat Settings</h3>
-
-              <div class="form-group">
-                <label class="control-sidebar-subheading">
-                  Show me as online
-                  <input type="checkbox" class="pull-right" checked>
-                </label>
-              </div><!-- /.form-group -->
-
-              <div class="form-group">
-                <label class="control-sidebar-subheading">
-                  Turn off notifications
-                  <input type="checkbox" class="pull-right">
-                </label>
-              </div><!-- /.form-group -->
-
-              <div class="form-group">
-                <label class="control-sidebar-subheading">
-                  Delete chat history
-                  <a href="javascript::;" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
-                </label>
-              </div><!-- /.form-group -->
-            </form>
-          </div><!-- /.tab-pane -->
+        <div class="wrapper wrapper-content">
+         
         </div>
-      </aside><!-- /.control-sidebar -->
-      <!-- Add the sidebar's background. This div must be placed
-           immediately after the control sidebar -->
-      <div class="control-sidebar-bg"></div>
-    </div><!-- ./wrapper -->
+        <div class="footer">
+          <div><strong>Copyright</strong> Example Company &copy; 2014-2018</div>
+        </div>
+      </div>
+      <div class="small-chat-box fadeInRight animated">
+        <div class="heading" draggable="true">
+          <small class="chat-date float-right"> 02.19.2015 </small>
+          Small chat
+        </div>
 
-    <!-- jQuery 2.1.4 -->
-    <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+        <div class="content">
+          <div class="left">
+            <div class="author-name">
+              Monica Jackson <small class="chat-date"> 10:02 am </small>
+            </div>
+            <div class="chat-message active">Lorem Ipsum is simply dummy text input.</div>
+          </div>
+          <div class="right">
+            <div class="author-name">
+              Mick Smith
+              <small class="chat-date"> 11:24 am </small>
+            </div>
+            <div class="chat-message">Lorem Ipsum is simpl.</div>
+          </div>
+          <div class="left">
+            <div class="author-name">
+              Alice Novak
+              <small class="chat-date"> 08:45 pm </small>
+            </div>
+            <div class="chat-message active">Check this stock char.</div>
+          </div>
+          <div class="right">
+            <div class="author-name">
+              Anna Lamson
+              <small class="chat-date"> 11:24 am </small>
+            </div>
+            <div class="chat-message">The standard chunk of Lorem Ipsum</div>
+          </div>
+          <div class="left">
+            <div class="author-name">
+              Mick Lane
+              <small class="chat-date"> 08:45 pm </small>
+            </div>
+            <div class="chat-message active">I belive that. Lorem Ipsum is simply dummy text.</div>
+          </div>
+        </div>
+        <div class="form-chat">
+          <div class="input-group input-group-sm">
+            <input type="text" class="form-control" />
+            <span class="input-group-append">
+              <button class="btn btn-primary" type="button">Send</button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div id="small-chat">
+        <span class="badge badge-warning float-right">5</span>
+        <a class="open-small-chat" href="">
+          <i class="fa fa-comments"></i>
+        </a>
+      </div>
+      <div id="right-sidebar" class="animated">
+        <div class="sidebar-container">
+          <ul class="nav nav-tabs navs-3">
+            <li>
+              <a class="nav-link active" data-toggle="tab" href="#tab-1"> Notes </a>
+            </li>
+            <li>
+              <a class="nav-link" data-toggle="tab" href="#tab-2"> Projects </a>
+            </li>
+            <li>
+              <a class="nav-link" data-toggle="tab" href="#tab-3"> <i class="fa fa-gear"></i> </a>
+            </li>
+          </ul>
 
-    <!-- Bootstrap 3.3.5 -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+          <div class="tab-content">
+            <div id="tab-1" class="tab-pane active">
+              <div class="sidebar-title">
+                <h3><i class="fa fa-comments-o"></i> Latest Notes</h3>
+                <small><i class="fa fa-tim"></i> You have 10 new message.</small>
+              </div>
 
-     <!-- DataTables -->
-    <script src="plugins/datatables/jquery.dataTables.js"></script>
-    <script src="plugins/datatables/dataTables.bootstrap.min.js"></script>
-    <!-- AdminLTE App -->
-    <script src="dist/js/app.min.js"></script>
-    <script src="dist/js/demo.js"></script>
-        <script>
-      $(function () {
-        $("#example1").DataTable();
-        $('#example2').DataTable({
-          "paging": true,
-          "lengthChange": false,
-          "searching": false,
-          "ordering": true,
-          "info": true,
-          "autoWidth": false
-        });
+              <div>
+                <div class="sidebar-message">
+                  <a href="#">
+                    <div class="float-left text-center">
+                      <img alt="image" class="rounded-circle message-avatar" src="img/a1.jpg" />
+
+                      <div class="m-t-xs">
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                      </div>
+                    </div>
+                    <div class="media-body">
+                      There are many variations of passages of Lorem Ipsum available.
+                      <br />
+                      <small class="text-muted">Today 4:21 pm</small>
+                    </div>
+                  </a>
+                </div>
+                <div class="sidebar-message">
+                  <a href="#">
+                    <div class="float-left text-center">
+                      <img alt="image" class="rounded-circle message-avatar" src="img/a2.jpg" />
+                    </div>
+                    <div class="media-body">
+                      The point of using Lorem Ipsum is that it has a more-or-less normal.
+                      <br />
+                      <small class="text-muted">Yesterday 2:45 pm</small>
+                    </div>
+                  </a>
+                </div>
+                <div class="sidebar-message">
+                  <a href="#">
+                    <div class="float-left text-center">
+                      <img alt="image" class="rounded-circle message-avatar" src="img/a3.jpg" />
+
+                      <div class="m-t-xs">
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                      </div>
+                    </div>
+                    <div class="media-body">
+                      Mevolved over the years, sometimes by accident, sometimes on purpose (injected
+                      humour and the like).
+                      <br />
+                      <small class="text-muted">Yesterday 1:10 pm</small>
+                    </div>
+                  </a>
+                </div>
+                <div class="sidebar-message">
+                  <a href="#">
+                    <div class="float-left text-center">
+                      <img alt="image" class="rounded-circle message-avatar" src="img/a4.jpg" />
+                    </div>
+
+                    <div class="media-body">
+                      Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
+                      the
+                      <br />
+                      <small class="text-muted">Monday 8:37 pm</small>
+                    </div>
+                  </a>
+                </div>
+                <div class="sidebar-message">
+                  <a href="#">
+                    <div class="float-left text-center">
+                      <img alt="image" class="rounded-circle message-avatar" src="img/a8.jpg" />
+                    </div>
+                    <div class="media-body">
+                      All the Lorem Ipsum generators on the Internet tend to repeat.
+                      <br />
+                      <small class="text-muted">Today 4:21 pm</small>
+                    </div>
+                  </a>
+                </div>
+                <div class="sidebar-message">
+                  <a href="#">
+                    <div class="float-left text-center">
+                      <img alt="image" class="rounded-circle message-avatar" src="img/a7.jpg" />
+                    </div>
+                    <div class="media-body">
+                      Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",
+                      comes from a line in section 1.10.32.
+                      <br />
+                      <small class="text-muted">Yesterday 2:45 pm</small>
+                    </div>
+                  </a>
+                </div>
+                <div class="sidebar-message">
+                  <a href="#">
+                    <div class="float-left text-center">
+                      <img alt="image" class="rounded-circle message-avatar" src="img/a3.jpg" />
+
+                      <div class="m-t-xs">
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                        <i class="fa fa-star text-warning"></i>
+                      </div>
+                    </div>
+                    <div class="media-body">
+                      The standard chunk of Lorem Ipsum used since the 1500s is reproduced below.
+                      <br />
+                      <small class="text-muted">Yesterday 1:10 pm</small>
+                    </div>
+                  </a>
+                </div>
+                <div class="sidebar-message">
+                  <a href="#">
+                    <div class="float-left text-center">
+                      <img alt="image" class="rounded-circle message-avatar" src="img/a4.jpg" />
+                    </div>
+                    <div class="media-body">
+                      Uncover many web sites still in their infancy. Various versions have.
+                      <br />
+                      <small class="text-muted">Monday 8:37 pm</small>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div id="tab-2" class="tab-pane">
+              <div class="sidebar-title">
+                <h3><i class="fa fa-cube"></i> Latest projects</h3>
+                <small><i class="fa fa-tim"></i> You have 14 projects. 10 not completed.</small>
+              </div>
+
+              <ul class="sidebar-list">
+                <li>
+                  <a href="#">
+                    <div class="small float-right m-t-xs">9 hours ago</div>
+                    <h4>Business valuation</h4>
+                    It is a long established fact that a reader will be distracted.
+
+                    <div class="small">Completion with: 22%</div>
+                    <div class="progress progress-mini">
+                      <div style="width: 22%" class="progress-bar progress-bar-warning"></div>
+                    </div>
+                    <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="small float-right m-t-xs">9 hours ago</div>
+                    <h4>Contract with Company</h4>
+                    Many desktop publishing packages and web page editors.
+
+                    <div class="small">Completion with: 48%</div>
+                    <div class="progress progress-mini">
+                      <div style="width: 48%" class="progress-bar"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="small float-right m-t-xs">9 hours ago</div>
+                    <h4>Meeting</h4>
+                    By the readable content of a page when looking at its layout.
+
+                    <div class="small">Completion with: 14%</div>
+                    <div class="progress progress-mini">
+                      <div style="width: 14%" class="progress-bar progress-bar-info"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="label label-primary float-right">NEW</span>
+                    <h4>The generated</h4>
+                    There are many variations of passages of Lorem Ipsum available.
+                    <div class="small">Completion with: 22%</div>
+                    <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="small float-right m-t-xs">9 hours ago</div>
+                    <h4>Business valuation</h4>
+                    It is a long established fact that a reader will be distracted.
+
+                    <div class="small">Completion with: 22%</div>
+                    <div class="progress progress-mini">
+                      <div style="width: 22%" class="progress-bar progress-bar-warning"></div>
+                    </div>
+                    <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="small float-right m-t-xs">9 hours ago</div>
+                    <h4>Contract with Company</h4>
+                    Many desktop publishing packages and web page editors.
+
+                    <div class="small">Completion with: 48%</div>
+                    <div class="progress progress-mini">
+                      <div style="width: 48%" class="progress-bar"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="small float-right m-t-xs">9 hours ago</div>
+                    <h4>Meeting</h4>
+                    By the readable content of a page when looking at its layout.
+
+                    <div class="small">Completion with: 14%</div>
+                    <div class="progress progress-mini">
+                      <div style="width: 14%" class="progress-bar progress-bar-info"></div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="label label-primary float-right">NEW</span>
+                    <h4>The generated</h4>
+                    <!--<div class="small float-right m-t-xs">9 hours ago</div>-->
+                    There are many variations of passages of Lorem Ipsum available.
+                    <div class="small">Completion with: 22%</div>
+                    <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div id="tab-3" class="tab-pane">
+              <div class="sidebar-title">
+                <h3><i class="fa fa-gears"></i> Settings</h3>
+                <small><i class="fa fa-tim"></i> You have 14 projects. 10 not completed.</small>
+              </div>
+
+              <div class="setings-item">
+                <span> Show notifications </span>
+                <div class="switch">
+                  <div class="onoffswitch">
+                    <input
+                      type="checkbox"
+                      name="collapsemenu"
+                      class="onoffswitch-checkbox"
+                      id="example"
+                    />
+                    <label class="onoffswitch-label" for="example">
+                      <span class="onoffswitch-inner"></span>
+                      <span class="onoffswitch-switch"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="setings-item">
+                <span> Disable Chat </span>
+                <div class="switch">
+                  <div class="onoffswitch">
+                    <input
+                      type="checkbox"
+                      name="collapsemenu"
+                      checked
+                      class="onoffswitch-checkbox"
+                      id="example2"
+                    />
+                    <label class="onoffswitch-label" for="example2">
+                      <span class="onoffswitch-inner"></span>
+                      <span class="onoffswitch-switch"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="setings-item">
+                <span> Enable history </span>
+                <div class="switch">
+                  <div class="onoffswitch">
+                    <input
+                      type="checkbox"
+                      name="collapsemenu"
+                      class="onoffswitch-checkbox"
+                      id="example3"
+                    />
+                    <label class="onoffswitch-label" for="example3">
+                      <span class="onoffswitch-inner"></span>
+                      <span class="onoffswitch-switch"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="setings-item">
+                <span> Show charts </span>
+                <div class="switch">
+                  <div class="onoffswitch">
+                    <input
+                      type="checkbox"
+                      name="collapsemenu"
+                      class="onoffswitch-checkbox"
+                      id="example4"
+                    />
+                    <label class="onoffswitch-label" for="example4">
+                      <span class="onoffswitch-inner"></span>
+                      <span class="onoffswitch-switch"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="setings-item">
+                <span> Offline users </span>
+                <div class="switch">
+                  <div class="onoffswitch">
+                    <input
+                      type="checkbox"
+                      checked
+                      name="collapsemenu"
+                      class="onoffswitch-checkbox"
+                      id="example5"
+                    />
+                    <label class="onoffswitch-label" for="example5">
+                      <span class="onoffswitch-inner"></span>
+                      <span class="onoffswitch-switch"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="setings-item">
+                <span> Global search </span>
+                <div class="switch">
+                  <div class="onoffswitch">
+                    <input
+                      type="checkbox"
+                      checked
+                      name="collapsemenu"
+                      class="onoffswitch-checkbox"
+                      id="example6"
+                    />
+                    <label class="onoffswitch-label" for="example6">
+                      <span class="onoffswitch-inner"></span>
+                      <span class="onoffswitch-switch"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="setings-item">
+                <span> Update everyday </span>
+                <div class="switch">
+                  <div class="onoffswitch">
+                    <input
+                      type="checkbox"
+                      name="collapsemenu"
+                      class="onoffswitch-checkbox"
+                      id="example7"
+                    />
+                    <label class="onoffswitch-label" for="example7">
+                      <span class="onoffswitch-inner"></span>
+                      <span class="onoffswitch-switch"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sidebar-content">
+                <h4>Settings</h4>
+                <div class="small">
+                  I belive that. Lorem Ipsum is simply dummy text of the printing and typesetting
+                  industry. And typesetting industry. Lorem Ipsum has been the industry's standard
+                  dummy text ever since the 1500s. Over the years, sometimes by accident, sometimes
+                  on purpose (injected humour and the like).
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast notification -->
+
+    <div
+      class="toast toast toast-bootstrap hide"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+      style="position: absolute; top: 20px; right: 20px"
+    >
+      <div class="toast-header">
+        <i class="fa fa-square text-navy"> </i>
+        <strong class="mr-auto m-l-sm">Notification</strong>
+        <small>1 min ago</small>
+        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="toast-body">Welcome to <strong>INSPINIA</strong> - Responsive Admin Theme.</div>
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Flot -->
+    <script src="js/plugins/flot/jquery.flot.js"></script>
+    <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="js/plugins/flot/jquery.flot.spline.js"></script>
+    <script src="js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="js/plugins/flot/jquery.flot.pie.js"></script>
+
+    <!-- Peity -->
+    <script src="js/plugins/peity/jquery.peity.min.js"></script>
+    <script src="js/demo/peity-demo.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- jQuery UI -->
+    <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+    <!-- GITTER -->
+    <script src="js/plugins/gritter/jquery.gritter.min.js"></script>
+
+    <!-- Sparkline -->
+    <script src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- Sparkline demo data  -->
+    <script src="js/demo/sparkline-demo.js"></script>
+
+    <!-- ChartJS-->
+    <script src="js/plugins/chartJs/Chart.min.js"></script>
+
+    <!-- Toastr -->
+    <script src="js/plugins/toastr/toastr.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        let toast = $(".toast");
+
+        setTimeout(function () {
+          toast.toast({
+            delay: 5000,
+            animation: true,
+          });
+          toast.toast("show");
+        }, 2200);
+
+        var data1 = [
+          [0, 4],
+          [1, 8],
+          [2, 5],
+          [3, 10],
+          [4, 4],
+          [5, 16],
+          [6, 5],
+          [7, 11],
+          [8, 6],
+          [9, 11],
+          [10, 30],
+          [11, 10],
+          [12, 13],
+          [13, 4],
+          [14, 3],
+          [15, 3],
+          [16, 6],
+        ];
+        var data2 = [
+          [0, 1],
+          [1, 0],
+          [2, 2],
+          [3, 0],
+          [4, 1],
+          [5, 3],
+          [6, 1],
+          [7, 5],
+          [8, 2],
+          [9, 3],
+          [10, 2],
+          [11, 1],
+          [12, 0],
+          [13, 2],
+          [14, 8],
+          [15, 0],
+          [16, 0],
+        ];
+        $("#flot-dashboard-chart").length &&
+          $.plot($("#flot-dashboard-chart"), [data1, data2], {
+            series: {
+              lines: {
+                show: false,
+                fill: true,
+              },
+              splines: {
+                show: true,
+                tension: 0.4,
+                lineWidth: 1,
+                fill: 0.4,
+              },
+              points: {
+                radius: 0,
+                show: true,
+              },
+              shadowSize: 2,
+            },
+            grid: {
+              hoverable: true,
+              clickable: true,
+              tickColor: "#d5d5d5",
+              borderWidth: 1,
+              color: "#d5d5d5",
+            },
+            colors: ["#1ab394", "#1C84C6"],
+            xaxis: {},
+            yaxis: {
+              ticks: 4,
+            },
+            tooltip: false,
+          });
+
+        var doughnutData = {
+          labels: ["App", "Software", "Laptop"],
+          datasets: [
+            {
+              data: [300, 50, 100],
+              backgroundColor: ["#a3e1d4", "#dedede", "#9CC3DA"],
+            },
+          ],
+        };
+
+        var doughnutOptions = {
+          responsive: false,
+          legend: {
+            display: false,
+          },
+        };
+
+        var ctx4 = document.getElementById("doughnutChart").getContext("2d");
+        new Chart(ctx4, { type: "doughnut", data: doughnutData, options: doughnutOptions });
+
+        var doughnutData = {
+          labels: ["App", "Software", "Laptop"],
+          datasets: [
+            {
+              data: [70, 27, 85],
+              backgroundColor: ["#a3e1d4", "#dedede", "#9CC3DA"],
+            },
+          ],
+        };
+
+        var doughnutOptions = {
+          responsive: false,
+          legend: {
+            display: false,
+          },
+        };
+
+        var ctx4 = document.getElementById("doughnutChart2").getContext("2d");
+        new Chart(ctx4, { type: "doughnut", data: doughnutData, options: doughnutOptions });
+      });
+
+      $(window).bind("scroll", function () {
+        let toast = $(".toast");
+        toast.css("top", window.pageYOffset + 20);
       });
     </script>
   </body>

@@ -34,7 +34,7 @@ $(document).ready(function(){
 
 <!-- Content Header (Page header) -->
 <div class="wrapper">
-  <section class="content-header" >
+  <section class="content-header">
     <h2>
       Data Admin
     </h2>
@@ -132,22 +132,22 @@ $(document).ready(function(){
 
 
 <!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-        <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Form Admin</h4>
-        </div>
-        <div class="modal-body">
+<div class="modal inmodal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content animated bounceInRight">
+      <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title">Form Admin</h4>
+      </div>
+            <!-- Modal content-->
+      <div class="modal-body">
         <form class="form-horizontal" id="form-admin" method="POST" action="aksi.php?page=s_admin">
                 
         </form>
-        </div>
-        <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-        </div>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+      </div>
     </div>
+  </div>
 </div>
